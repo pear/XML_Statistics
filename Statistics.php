@@ -18,11 +18,13 @@
 // |          and his class xml_check                                     |
 // |          (http://phpxmlclasses.sourceforge.net/)                     |
 // +----------------------------------------------------------------------+
+//
+//    $Id$
 
 /**
  * XML/Statistics.php
  *
- * Package to statistically analy XML documents, i.e.
+ * Package to statistically analyze XML documents, i.e.
  * counting tags, CData sections, Processing instructions and more.
  *
  * @category XML
@@ -577,7 +579,7 @@ class XML_Statistics extends XML_Parser {
      * @param  string data
      * @return void
      */
-    function    piHandler($parser, $target, $data)
+    function piHandler($parser, $target, $data)
     {
         // count total amount of processing instructions
         $this->_pis["__total"]++;
@@ -599,7 +601,7 @@ class XML_Statistics extends XML_Parser {
      * @param  string data
      * @return void
      */
-    function    entityrefHandler($parser, $open_entity_names, $base, $system_id, $public_id)
+    function entityrefHandler($parser, $open_entity_names, $base, $system_id, $public_id)
     {
         // count total amount of external entities
         $this->_extEntities["__total"]++;
