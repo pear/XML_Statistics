@@ -277,7 +277,7 @@ class XML_Statistics extends XML_Parser {
     {
         if ($tagname != null) {
             if (!isset($this->_attribsPerTag[$tagname])) {
-                return $this->raiseError('Tag not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
+                return $this->raiseError('Tag {$tagname} not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
             }
             $list = $this->_attribsPerTag[$tagname];
         } else {
@@ -307,7 +307,7 @@ class XML_Statistics extends XML_Parser {
         if (isset($this->_tags[$tagname])) {
             return $this->_tags[$tagname];
         }
-        return $this->raiseError('Tag not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
+        return $this->raiseError('Tag {$tagname} not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
     }
 
    /**
@@ -328,7 +328,7 @@ class XML_Statistics extends XML_Parser {
         if (isset($this->_tagsInDepth[$depth])) {
             return $this->_tagsInDepth[$depth];
         }
-        return $this->raiseError('Inavid depth.', XML_STATISTICS_ERROR_INVALID_DEPTH);
+        return $this->raiseError('Invalid depth {$depth}.', XML_STATISTICS_ERROR_INVALID_DEPTH);
     }
 
    /**
@@ -356,16 +356,16 @@ class XML_Statistics extends XML_Parser {
             if (isset($this->_attribs[$attribute])) {
                 return $this->_attribs[$attribute];
             }
-            return $this->raiseError('Attribute not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
+            return $this->raiseError('Attribute {$attribute} not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
         }
 
         if (!isset($this->_attribsPerTag[$tagname])) {
-            return $this->raiseError('Tag not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
+            return $this->raiseError('Tag {$tagname} not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
         }
         if (isset($this->_attribsPerTag[$tagname][$attribute])) {
             return $this->_attribsPerTag[$tagname][$attribute];
         }
-        return $this->raiseError('Attribute not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
+        return $this->raiseError('Attribute {$attribute} not found.', XML_STATISTICS_ERROR_TAG_NOT_FOUND);
     }
     
    /**
@@ -389,7 +389,7 @@ class XML_Statistics extends XML_Parser {
         if (isset($this->_pis[$target])) {
             return $this->_pis[$target];
         }
-        return $this->raiseError('Processing Instruction with specified target not found.', XML_STATISTICS_ERROR_PI_NOT_FOUND);
+        return $this->raiseError('Processing Instruction with specified target {$target} not found.', XML_STATISTICS_ERROR_PI_NOT_FOUND);
     }
 
    /**
@@ -419,7 +419,7 @@ class XML_Statistics extends XML_Parser {
         if (isset($this->_extEntities[$name])) {
             return $this->_extEntities[$name];
         }
-        return $this->raiseError('External entity target not found.', XML_STATISTICS_ERROR_EXTERNAL_ENTITY_NOT_FOUND);
+        return $this->raiseError('External entity target {$name} not found.', XML_STATISTICS_ERROR_EXTERNAL_ENTITY_NOT_FOUND);
     }
 
    /**
