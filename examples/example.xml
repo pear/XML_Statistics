@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE page [
+    <!ENTITY foo SYSTEM "foo.xml">
+    <!ENTITY bar SYSTEM "bar.xml">
+]>
+<document title="Current News">
+    <!--
+        This is just a dummy XML document, taken from www.php-tools.net.
+        The external entities have been added so the feature can be shown.
+    -->
+	<meta project="none">
+		<keywords/>
+		<description/>
+		<author>Stephan Schmidt</author>
+
+		<!-- Meta Navigation -->
+		<getMetaNav/>
+
+		<!-- Navigation -->
+		<include parse="xml" href="/nav/headernav.xml"/>
+		<include parse="xml" href="/nav/projectnav.xml"/>
+
+		<addTemplateFile file="news.tmpl"/>
+		<addTemplateFile file="rss_sidebar.tmpl"/>
+		<addTemplateFile file="scroller.tmpl"/>
+	</meta>
+    <?PHP
+        I am a PHP processing instruction.
+    ?>
+    <?ASP
+        I am an ASP processing instruction.
+    ?>
+    &foo;
+	<page label="PHP Application Tools" sublabel="Current News">
+		<intro>
+			<introtitle>Welcome to PHP Application Tools!</introtitle>
+			<para>
+				If you're new to pat, and would like to know what we do here, take a look at <link url="/about/project.xml">"About Pat"</link> 
+				or check out the <link url="/about/projectsOverview.xml">"projects overview"</link>. Otherwise, you probably know your way 
+				around the site already <smiley type="smile"/>
+			</para>
+		</intro>
+        &bar;
+        &bar;
+		<body>
+			<main>
+				<section title="Current breaking news">
+					<news type="newversion" title="patUser v2.2.3" date="19.08.2003" author="By gERD Schaufelberger">
+						<para>
+							Again, patUser has improved. Download the new package for additional support of 
+							authentication handler and some minor fixes.
+						</para>
+						<ref type="internal" url="/patUser/download.xml">patUser v2.2.3 download</ref>
+						<ref type="internal" url="/patUser/changelog.xml">Changelog</ref>
+					</news>
+	
+					<news type="release" title="PEAR::Stream_Var" date="16.08.2003" author="By Stephan Schmidt">
+   						<para>
+                            Stream_Var is a wrapper for PHP's filesystem functions that allows access to PHP variables.
+							It allows you to read and write from variables as if the were files.
+	 					</para>
+						<ref type="external" url="http%3A%2F%2Fpear.php.net%2Fpackage-info.php%3Fpackage%3DStream_Var">Go to PEAR::Stream_Var</ref>
+					</news>
+					<news type="community" title="PHP Architect August issue released" date="10.08.2003" author="By Stephan Schmidt">
+						<para>
+							Today the new issue of PHP Architect has been released. This issue features an article
+							by Stephan Schmidt (with a little help from gERD) that focusses on the generation of
+							PDF documents with XML as a source. 
+						</para>
+						<para>
+							This is the first of our articles that has been published in PHP Architect. The magazine
+							is available in a print edition as well as a digital PDF version.
+						</para>
+						<ref type="internal" url="/about/publications.xml">All our publications</ref>
+						<ref type="external" url="http://www.phparch.com">Visit PHP Architect website</ref>
+					</news>
+	
+					<news type="newversion" title="patUser v2.2.2" date="08.08.2003" author="By gERD Schaufelberger">
+						<para>
+							Yet another patUser release. Besides some minor bugfixes the class now includes some changes
+							send to us by Paul Baraonowski. 
+						</para>
+						<ref type="internal" url="/patUser/download.xml">patUser v2.2.2 download</ref>
+						<ref type="internal" url="/patUser/changelog.xml">Changelog</ref>
+					</news>
+	
+					<news type="release" title="PEAR::XML_Serializer released" date="03.08.2003" author="By Stephan Schmidt">
+   						<para>
+                            XML_Serializer serializes complex data structures like arrays or object as XML documents. This class helps you generating any XML document you require without the need for DOM.
+	 					</para>
+                        <para>
+                            That means it can be used to create an RDF document from an PHP array and does not require you
+                            to know anything about XML or PHP's string functions.
+                        </para>
+						<ref type="external" url="http%3A%2F%2Fpear.php.net%2Fpackage-info.php%3Fpackage%3DXML_Serializer">Go to PEAR::XML_Serializer</ref>
+					</news>
+					<news type="release" title="PEAR::XML_Util released" date="01.08.2003" author="By Stephan Schmidt">
+   						<para>
+                            Today, we released a new PEAR package, called XML_Util. The class provides several often
+                            needed methods for the creation of XML documents.
+	 					</para>
+                        <para>
+                            Functionality includes creating of attribute lists from arrays, creation of tags, validation of XML names and more.
+                        </para>
+						<ref type="external" url="http%3A%2F%2Fpear.php.net%2Fpackage-info.php%3Fpackage%3DXML_Util">Go to PEAR::XML_Util</ref>
+					</news>
+					<news type="newversion" title="patSpiderizer v2.0.8 released" date="30.07.2003" author="By Sebastian 'The Argh' Mordziol">
+						<para>
+							This new version fixes all the little bugs that were reported since the release of v2.0.7, as well as
+							the "Altavista" bug in the statistics - if you already use patSpiderizer, I strongly recommend you 
+							install the update package.
+						</para>
+						<para>
+							Also in this release, one (small) new feature: add several links or text blocks at once to a spider	page in a breeze
+							with the new link/block lists on the spider page overview page in the administration interface.
+						</para>
+						<ref type="internal" url="/patSpiderizer/changelog.xml">What's changed?</ref>
+						<ref type="internal" url="/patSpiderizer/download.xml">Download patSpiderizer v2.0.8</ref>
+					</news>
+
+					<news type="newversion" title="patUser v2.1.3 and patUser v2.2.1" date="26.07.2003" author="By gERD Schaufelberger">
+						<para>
+							Once again, there is a new (minor) version of patUser. Even if versions 2.1.2 and 2.2.0 are only four days old, 
+							the new versions include some important improves. Some bugs were fixed, the download-package was enhanced and some 
+							more notices were removed. Also the new versions passed some more tests <smiley type="smile"/>
+						</para>
+						<para>
+							BTW, thank you for your help testing and improving patUser!
+	 					</para>
+						<ref type="internal" url="/patUser/download.xml">patUser v2.1.3 / v2.2.1 download</ref>
+						<ref type="internal" url="/patUser/changelog.xml">Changelog</ref>
+					</news>
+					<news type="newversion" title="patUser v2.1.2 and patUser v2.2.0 BETA" date="22.07.2003" author="By Sebastian Mordziol">
+						<para>
+							New in this version: bugs, notices and warnings removed (see the changelog for full details). Warning: this is 
+							the last version of patUser supporting patDbc, as we are switching to PEAR::DB.	Version 2.2.0 is the new branch	
+							supporting PEAR:DB - but keep in mind that it is still BETA! If you are willing to test it, feel free to send 
+							your bug reports to gERD directly.
+	 					</para>
+						<ref type="internal" url="/patUser/download.xml">patUser v2.1.2 / v2.2.0 BETA download</ref>
+						<ref type="internal" url="/patUser/changelog.xml">Changelog</ref>
+					</news>
+					<news type="release" title="PEAR::HTTP_Server released" date="22.07.2003" author="By Stephan Schmidt">
+						<para>
+							Today the first beta version of HTTP_Server has been released through PEAR.
+							This class allows you to create your own HTTP servers without worrying about HTTP itself.
+							The class is based on my other PEAR class, Net_Server, but it can be easily ported to patServer if
+							you do not want to use PEAR.
+	 					</para>
+						<ref type="external" url="http%3A%2F%2Fpear.php.net%2Fpackage-info.php%3Fpackage%3DHTTP_Server">Go to PEAR::HTTP_Server</ref>
+					</news>
+					<news type="community" title="pat meets PEAR" date="21.07.2003" author="By Stephan Schmidt">
+						<para>
+							One of our projects, patServer, is now also available through PEAR. The pearified
+							version of patServer is called Net_Server and can easily be installed using the PEAR installer.
+	 					</para>
+						<para>
+							In the future, I'll maintain both versions, so that you may either use the original class
+							or the pearified one.
+						</para>
+						<ref type="external" url="http%3A%2F%2Fpear.php.net%2Fpackage-info.php%3Fpackage%3DNet_Server">Go to PEAR::Net_Server</ref>
+						<ref type="internal" url="/patServer/overview.xml">Learn more about patServer</ref>
+					</news>
+					<news type="internal" title="Two new publications" date="15.07.2003" author="By Stephan Schmidt">
+						<para>
+							The book "PHP im Einsatz 2.0" has been finally released. It features 25 articles 
+							on sessions at the International PHP Conference 2002. We have contributed two articles
+							to the book, one on IPC and one on ext/sockets.
+	 					</para>
+						<ref type="internal" url="/about/publications.xml">Go to publications (scroll down)</ref>
+					</news>
+					<news type="newversion" title="patTemplate v2.5 beta released" date="13.07.2003" author="By Stephan Schmidt">
+						<para>
+							Today, we released the beta version of patTemplate 2.5.
+							This marks the last minor version change, before we work on the release process of patTemplate 3.
+							Please help us by testing patTemplate 2.5 beta.
+	 					</para>
+						<ref type="internal" url="/patTemplate/download.xml">Download new version</ref>
+						<ref type="internal" url="/patTemplate/changelog.xml">Read the changelog</ref>
+					</news>
+
+					<news type="newversion" title="patConfiguration v1.6 released" date="06.07.2003" author="By Stephan Schmidt">
+						<para>
+							Today a new version of patConfiguration has been released. Its new features
+							include defining custom tags, xinc, xml:space support and PHP 5 compatibilty as well as extensive
+							documentation and examples.
+						</para>
+						<ref type="internal" url="/patConfiguration/download.xml">Download new version</ref>
+						<ref type="internal" url="/patConfiguration/changelog.xml">Read the changelog</ref>
+					</news>
+
+					<news type="internal" title="patSite revamped!" date="30.06.2003" author="By the pat Team">
+						<para>
+							Maybe you are the first to set foot (mouse?) in the new generation PHP Application Tools. And right on time
+							for pat's second birthday <smiley type="smile"/> We have been working on the
+							new, improved version of our site for quite some time now, and we are quite proud to give you the following
+							new features and enhancements:
+						</para>
+						<para>
+							<ul>
+								<uli>Sidebar with site navigation features (for easier documentation navigation, for ex.)</uli>
+								<uli>We have enabled Mozilla Site navigation bar functionality (enable via "View - Show/Hide - Site Navigation Bar")</uli>
+								<uli>Lightweight HTML code and lighter DHTML code (rip, Netscape 4...)</uli>
+								<uli>RSS Newsfeed on the news page</uli>
+								<uli>New, highly improved PHP and XML syntax highlighting with code output, and function insight</uli>
+								<uli>Overall improved page design for easier readability</uli>
+								<uli>Completely overhauled file structure</uli>
+								<uli>New member listed on the authors page</uli>
+								<uli>Yet lighter background for better readability</uli>
+								<uli>New, Beta patXMLRenderer version engine for the site (for testing purposes for the next release)</uli>
+							</ul>
+						</para>
+						<para>
+							And we cannot be stopped - following right in the tracks of perpetual change, we 
+							are planning the following new features:
+						</para>
+						<ul>
+							<uli>Generate Microsoft Word from any page of our site</uli>
+							<uli>Generate PDF documentation with complete chapters of our site for easy documentation download</uli>
+						</ul>
+					</news>
+
+					<news type="internal" title="Submit your patTemplate wishes!" date="25.05.2003" author="By Stephan Schmidt">
+						<para>
+							We are currently planning the next major version of patTemplate, which will be completely recoded from scratch.
+							So now's the perfect time to send in your wishes for patTemplate 3.0.
+						</para>
+						<ref type="external" url="http://www.php-tools.de/xena/apps/forum/app/index.php?fid=1&amp;xenaaction=displayArticle&amp;xenaboard=1&amp;xenathread=165&amp;xenaarticleid=----">Submit your wishes in the forum</ref>
+						<ref type="internal" url="contact/contact.xml">contact us by mail</ref>
+					</news>
+	
+					<news type="download" title="Slides from International PHP Conference 2003 Spring Edition available" date="11.05.2003" author="By Stephan Schmidt">
+						<para>
+							The slides from our presentations at the International PHP Conference 2003 - Spring Edition
+							in Amsterdam are now available for download. Gerd Schaufelberger did a presentation about
+							the use of Design Patterns to ease your life as a PHP programmer and Stephan Schmidt
+							introcuced LaTeX as a possibilty to transform XML to PDF Documents. Click on the links below to
+							get to the session material.
+						</para>
+						<ref type="internal" url="/about/presentations.xml#phpconf2003spring_patterns">Design Patterns and the Real World</ref>
+						<ref type="internal" url="/about/presentations.xml#phpconf2003spring_xml2pdf">Dynamic transformations from XML to PDF Documents with the use of LaTeX</ref>
+					</news>
+	
+					<news type="download" title="Slides from PHPCon 2003 East available" date="04.05.2003" author="By Stephan Schmidt">
+						<para>
+							The slides and handout from my presentation "XML transformations with PHP" are available for
+							download. The session covered XSLT basics as well as an in-depth look at patXMLRenderer and a comparison
+							with PEAR's XML_Transformer.
+						</para>
+						<ref type="internal" url="/about/presentations.xml#phpcon2003east_xml">Go to session material</ref>
+					</news>
+	
+					<news type="internal" title="patSpiderizer call to feature requests" date="29.04.2003" author="By Sebastian Mordziol">
+						<para>
+							Long awaited, the next patSpiderizer version is in the works, and now is the time to make
+							your wishes be heard! I have started a thread in the patSpiderizer forum where you can
+							contribute all your feature requests:
+						</para>
+						<ref type="external" url="http://www.php-tools.de/forum/index.php?board=patSpiderizer">Make your feature request in the forum</ref>
+					</news>
+	
+					<news type="community" title="PHP Con East" date="18.02.2003" author="By Sebastian Mordziol">
+						<para>
+							<img src="graphics/phpconeast2003.gif" width="136" height="70" vspace="0" hspace="10" border="0" align="right"/>
+							Stephan Schmidt will hold a session at this spring's PHP Con East, which will take place from
+							april 23rd to 25th in New York. Stephan's talk is about "XML-based web applications" and will present 
+							our XML transformer class patXMLRenderer.
+						</para>
+						<ref type="external" url="http://www.php-con.com">PHP Con East</ref>
+						<ref type="internal" url="/patXMLRenderer/overview.xml">More about patXMLRenderer</ref>
+					</news>
+	
+					<news type="community" title="PHP conference spring edition" date="18.02.2003" author="By Sebastian Mordziol">
+						<para>
+							Stephan Schmidt and gERD Schaufelberger will hold two sessions together at this springs's International PHP
+							conference in Amsterdam which will take place on may 8 and 9. Our two sessions are called
+							"Design patterns and the real world" and "Dynamical transformations from XML to PDF-Documents with use of LaTeX". We will be
+							happy to see you there!
+						</para>
+						<ref type="external" url="http://www.phpconference.com">International PHP Conference website</ref>
+					</news>
+	
+					<news type="misc" title="patConfiguration Tutorial on devshed.com" date="18.02.2003" author="By Sebastian Mordziol">
+						<para>
+							Vikram Vaswani, author of the book <link type="external" url="http://www.amazon.de/exec/obidos/ASIN/0735712271/qid=1023874729/sr=1-3/phptoolsde-21">"PHP and XML"</link> 
+							has published a tutorial on patConfiguration, our XML configuration reader class. The tutorial will give you
+							in-depth knowledge of patConfiguration's features in 11 steps.
+						</para>
+						<ref type="external" url="http://www.devshed.com/Server_Side/PHP/patConfiguration/page1.html">Read the tutorial on devshed</ref>
+						<ref type="internal" url="/patConfiguration/overview.xml">More about patConfiguration</ref>
+					</news>
+					
+					<news type="internal" title="new pat publications" date="29.01.2003" author="By Sebastian Mordziol">
+						<para>
+							The new issue of the german magazine "PHP Magazin" is now out in stores, with two 
+							articles from the pat team. Make sure to grab yours now! Here's a short overview of the articles:
+						</para>
+						<ul>
+							<uli>
+								"Integration": case study of the german portal 1und1.com by Stephan Schmidt
+								 and Sebastian Mordziol.
+							</uli>
+							<uli>
+								"Auf Gutenbergs Spuren": generate PDF files from XML with LaTeX and PHP by 
+								gERD Schaufelberger.
+							</uli>
+						</ul>
+						<ref type="internal" url="/about/publications.xml">More in our publications page...</ref>
+					</news>
+				</section>
+				<section title="Archived news">
+					<para>
+						If you are interested in reading the news of times past, you should take a look at our news archive.
+					</para>
+					<ul>
+						<uli><link type="internal" url="news/archive2002.xml">News from 2002</link></uli>
+						<uli><link type="internal" url="news/archive2001.xml">News from 2001</link></uli>
+					</ul>
+				</section>
+			</main>
+			<sidebar>
+				<include href="/misc/inc_partnersites.xml"/>
+			</sidebar>
+		</body>	
+	</page>
+</document>
